@@ -14,7 +14,7 @@
     "react-native",
     "barcode"
   ],
-  "author": "ekreutz",
+  "author": "react-native-component",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/newoceaninfosys/react-native-smart-barcode/issues"
