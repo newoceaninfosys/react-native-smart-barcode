@@ -15,23 +15,27 @@ The library uses [https://github.com/zxing/zxing][1] to decode the barcodes for 
 ## Installation
 
 ```
-npm install react-native-smart-barcode --save
+$ npm install @nois/react-native-smart-barcode --save
 ```
 
-## Notice
-
-It can only be used greater-than-equal react-native 0.4.0 for ios, if you want to use the package less-than react-native 0.4.0, use `npm install react-native-smart-barcode@untilRN0.40 --save`
-
-
 ## Installation (iOS)
+* (>= RN 0.60.0) Add following to `react-native.config.js > dependencies`.
+```
+# React-Native 0.60.0 and Above
+module.exports = {
+  ...
+  dependencies: {
+    "@nois/react-native-smart-barcode": { platforms: { ios: null } },
+    ...
+  }
+};
+```
+
+* (>= RN 0.60.0) Run `$ pod install` from `ios` folder.
 
 * Drag RCTBarCode.xcodeproj to your project on Xcode.
 
 * Click on your main project file (the one that represents the .xcodeproj) select Build Phases and drag libRCTBarCode.a from the Products folder inside the RCTBarCode.xcodeproj.
-
-* Look for Header Search Paths and make sure it contains $(SRCROOT)/../../../react-native/React as recursive.
-
-* Dray raw folder to your project
 
 * Add `Privacy - Camera Usage Description` property in your info.plist(for ios 10)
 
@@ -42,7 +46,7 @@ It can only be used greater-than-equal react-native 0.4.0 for ios, if you want t
 ```
 ...
 include ':react-native-smart-barcode'
-project(':react-native-smart-barcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-smart-barcode/android')
+project(':react-native-smart-barcode').projectDir = new File(rootProject.projectDir, '../node_modules/@nois/react-native-smart-barcode/android')
 ```
 
 * In `android/app/build.gradle`
@@ -132,8 +136,8 @@ see [ReactNativeComponentDemos][0]
 
 ## Usage
 
-Install the package from npm with `npm install react-native-smart-barcode --save`.
-Then, require it from your app's JavaScript files with `import Barcode from 'react-native-smart-barcode'`.
+Install the package from npm with `npm install @nois/react-native-smart-barcode --save`.
+Then, require it from your app's JavaScript files with `import Barcode from '@nois/react-native-smart-barcode'`.
 
 ```js
 
@@ -147,7 +151,7 @@ import {
     Alert,
 } from 'react-native'
 
-import Barcode from 'react-native-smart-barcode'
+import Barcode from '@nois/react-native-smart-barcode'
 import TimerEnhance from 'react-native-smart-timer-enhance'
 
 class BarcodeTest extends Component {

@@ -127,6 +127,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 9FCCD74F1DAC8DA800025BFD;
@@ -247,9 +248,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../../../react-native/React/**",
+					"${SYMROOT}",
+					"$(SRCROOT)/../../../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,9 +262,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../../../react-native/React/**",
+					"${SYMROOT}",
+					"$(SRCROOT)/../../../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
