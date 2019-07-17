@@ -15,6 +15,10 @@ The library uses [https://github.com/zxing/zxing][1] to decode the barcodes for 
 ## Installation
 
 ```
+# RN < 0.60.0
+$ npm install @nois/react-native-smart-barcode@1.0.8 --save
+
+# RN >= 0.60.0
 $ npm install @nois/react-native-smart-barcode --save
 ```
 
